@@ -1,0 +1,66 @@
+<div class="bootstrap-wrapper" *ngIf="!isSubmit">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!-- instructions -->
+        <h3>instructions</h3>
+      </div>
+      <div class="col-md-8">
+        <!-- questions -->
+        <!-- <ng-container *ngIf="questions">
+          <h1 class="mt20">
+            On Going Quiz <b>{{ questions[0].quiz.title }}</b>
+          </h1>
+        </ng-container> -->
+
+        <li *ngFor="let q of questions; let i = index" class="mt10">
+          
+            <p>
+              <b>Q {{ i + 1 }})</b>
+              <span class="ml10" [innerHTML]="q.question"></span>
+            </p>
+
+            <div></div>
+            <br />
+
+            <div class="row mt20">
+              <div class="col-md-6">
+                <input
+                  type="radio"
+                  [value]="q.option1"
+                  [name]="i"
+                  [(ngModel)]="q.givenAnswer"
+                />{{ q.choice1 }}
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="radio"
+                  [value]="q.option2"
+                  [name]="i"
+                  [(ngModel)]="q.givenAnswer"
+                />{{ q.choice2 }}
+              </div>
+            </div>
+
+            <div class="row mt20">
+              <div class="col-md-6">
+                <input
+                  type="radio"
+                  [value]="q.option3"
+                  [name]="i"
+                  [(ngModel)]="q.givenAnswer"
+                />{{ q.choice3 }}
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="radio"
+                  [value]="q.option4"
+                  [name]="i"
+                  [(ngModel)]="q.givenAnswer"
+                />{{ q.choice4 }}
+              </div>
+            </div>
+          
+        </li>
+        </div>
+

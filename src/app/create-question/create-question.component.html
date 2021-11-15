@@ -1,0 +1,35 @@
+<!-- <ngb-toast *ngIf="show" header="Notification!"  (hidden)="show=false">
+  Question added successfully!
+</ngb-toast> -->
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Question</span>
+    <input type="text" #question (keyup)="0" class="form-control" placeholder="Enter the Question" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Choice 1</span>
+    <input type="text" #choice1 (keyup)="0" class="form-control" placeholder="Enter the first Choice" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Choice 2</span>
+    <input type="text" #choice2 (keyup)="0" class="form-control" placeholder="Enter the second Choice" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Choice 3</span>
+    <input type="text" #choice3 (keyup)="0" class="form-control" placeholder="Enter the third Choice" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Choice 4</span>
+    <input type="text" #choice4 (keyup)="0" class="form-control" placeholder="Enter the fourth choice" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">Correct choice</span>
+    <input type="number" #correct (keyup)="0" class="form-control" placeholder="Enter the correct choice" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    
+    <button class="btn btn-primary" (click)="addQuestion(question.value,choice1.value,choice2.value,choice3.value,choice4.value,correct.value)">Add Question</button>
+
+   
+  </div>

@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+      <div class="card">
+          <div class="text-center">
+              <h1>Login</h1>
+              <h5>Please enter email and password</h5>
+          </div>         
+                  <form>
+                      <div class="mb-3">
+                        <label data-error="Required field!" for="username" class="form-label">Username</label>
+                        <input class="validate" formControlName="username" type="username" class="form-control" id="username" aria-describedby="emailHelp" required>
+                        <div id="username" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label data-error="Required field!" for="password" class="form-label">Password</label>
+                        <input class="validate" formControlName="password" type="password" class="form-control" id="password" required>
+                      </div>                       
+                      <button  type="submit"(click)="onsubmit()" class="btn btn-primary">Login</button>
+                    </form>
+           <a style="margin-top: 5px;" [routerLink]="['/signup']" >New user? Click to signup</a>
+      </div>
+  </div>
+</div>
+<!-- <div class="background-wrap">
+  <div class="background"></div>
+</div>
+
+<form id="accesspanel" action="">
+  <h1 id="litheader">Quizapp</h1>
+  <div class="inset">
+    <p>
+      <input type="text" name="username" [(ngModel)]="username" id="email" placeholder="username">
+    </p>
+    <p>
+      <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="password">
+    </p>
+  </div>
+  <p class="p-container">
+    <input type="submit" name="Login" id="go" value="Login" (click)="loginpage()">
+  </p>
+</form> -->
+
+<!-- <div class="col-md-12">
+  <div class="card card-container">
+    <img
+      id="profile-img"
+      src="https://image.freepik.com/free-vector/quiz-logo_2728-12.jpg"
+      class="profile-img-card"
+    />
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+         
+          
+         
+        >
+        
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+        
+          
+          minlength="6"
+        
+        >
+       
+          
+          <div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary " (click)="onsubmit()">
+          Login
+        </button>
+      </div>
+      <div class="form-group">
+        
+      </div>
+    </form> 
+
+    
+  </div>
+</div>  -->
+
+
+

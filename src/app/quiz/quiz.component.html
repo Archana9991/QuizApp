@@ -1,0 +1,71 @@
+
+<li *ngFor="let q of questions; let i = index" class="mt20">
+    
+      <p>
+        <b> Question {{ i + 1 }})</b>
+        <span class="ml20" [innerHTML]="q.question"  ></span>
+      </p>
+      <mat-radio-group  aria-labelledby="example-radio-button-label" class="example-radio-button"
+      [(ngModel)]="q.givenAnswer" >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6" >
+            
+             <p><mat-radio-button class="example-radio-button"  [value]="q.choice1" > {{q.choice1}}
+             </mat-radio-button></p>
+          </div>
+          <div class="col-md-6">
+            <p><mat-radio-button class="example-radio-button"  [value]="q.choice2" > {{q.choice2}}
+            </mat-radio-button></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p><mat-radio-button class="example-radio-button" [value]="q.choice3" > {{q.choice3}}
+          </mat-radio-button></p>
+          </div>
+          <div class="col-md-6">
+            <p><mat-radio-button class="example-radio-button"  [value]="q.choice4" > {{q.choice4}}
+          </mat-radio-button></p>
+          </div>
+        
+
+        </div>
+     
+<!--         
+       <p class="mt20"><b>Correct Answer:</b> {{ q.answer }}</p> --> 
+      </div>
+
+    </mat-radio-group>
+    
+    
+</li>
+<mat-card-actions>
+  <button
+    mat-button
+    class="btn btn-success btn-primary" (click)="submitQuiz()"
+    
+  >Submit</button>
+  </mat-card-actions>
+<!-- <section><button  type="submit" class="btn btn-primary">Submit</button>
+</section> -->
+       
+<!-- <mat-card-content class="text-center">
+  <h1>Marks Got : {{ marksGot }}</h1>
+  <h1>Correct Answers : {{ correctAnswers }}</h1>
+  
+</mat-card-content> -->
+
+<div class="card-content">
+  <!-- <h2 class="header">{{name}}</h2> -->
+  <p>Your Score: {{ marksGot }}</p><br>
+  <hr>
+  <a class="alert-link" routerLink="/quiz">
+      <button class="waves-effect waves-light btn"  [routerLink]="['/quiz']" >Try Again
+      </button>
+  </a>
+
+</div>
+
+
+      
