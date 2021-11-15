@@ -33,6 +33,7 @@ pipeline {
 //            slackSend message : 'Installation failed'
 //         }
 //         }
+          
 //         }
         stage('Test') {
             steps {
@@ -65,3 +66,4 @@ pipeline {
 //         }
     }
 }
+        }
