@@ -11,6 +11,8 @@ pipeline {
    steps{
       bat 'start cmd.exe /c C:\\Windows\\System32\\cmd.exe'\
    }
+       }
+         
         stage('Check version') {
             steps {
                 echo 'Checking..'
