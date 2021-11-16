@@ -5,7 +5,7 @@ pipeline {
     agent any
   stage('batchscript') {
    steps{
-      bat 'start cmd.exe /c C:\Windows\System32\cmd.exe'\
+      bat 'start cmd.exe /c C:\\Windows\\System32\\cmd.exe'\
    }
 }
   
