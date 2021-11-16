@@ -18,7 +18,7 @@ pipeline {
 //            slackSend message : 'Checking failed'
 //         }
 //         }
-//         }
+        }
         stage('Install dependencies') {
             steps {
                 echo 'Install deps..'
@@ -34,7 +34,7 @@ pipeline {
 //         }
 //         }
           
-//         }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
@@ -49,7 +49,7 @@ pipeline {
 //            slackSend message : 'Testing failed'
 //         }
 //         }
-//         }
+        }
         stage('Package') {
             steps {
                 echo 'npm build'
@@ -63,7 +63,7 @@ pipeline {
 //            slackSend message : 'Building failed'
 //         }
 //         }
-//         }
-    }
-}
         }
+    }
+
+        
