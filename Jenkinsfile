@@ -3,13 +3,14 @@ pipeline {
     nodejs 'Node17'
   }
     agent any
-  stage('batchscript') {
-   steps{
-      bat 'start cmd.exe /c C:\\Windows\\System32\\cmd.exe'\
-   }
+ 
 }
   
     stages {
+       stage('batchscript') {
+   steps{
+      bat 'start cmd.exe /c C:\\Windows\\System32\\cmd.exe'\
+   }
         stage('Check version') {
             steps {
                 echo 'Checking..'
