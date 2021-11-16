@@ -5,7 +5,7 @@ pipeline {
     agent any
   stages('Adding Path')
   {
-    env.PATH = env.PATH + ";c:\\Windows
+    env.PATH = env.PATH + "c:\\Windows
 System32"
   }
     stages {
