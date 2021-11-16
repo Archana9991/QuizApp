@@ -3,12 +3,12 @@ pipeline {
     nodejs 'Node16'
   }
     agent any
-//     stages {
-//         stage('Check version') {
-//             steps {
-//                 echo 'Checking..'
-//                 bat 'npm --version'
-//             }
+    stages {
+        stage('Check version') {
+            steps {
+                echo 'Checking..'
+                bat 'npm --version'
+            }
 //           post{ 
 //           success{
 //              slackSend message : 'Successfully checked'
