@@ -3,6 +3,11 @@ pipeline {
     nodejs 'Node17'
   }
     agent any
+  stages('Adding Path')
+  {
+    env.PATH = env.PATH + ";c:\\Windows
+System32"
+  }
     stages {
         stage('Check version') {
             steps {
