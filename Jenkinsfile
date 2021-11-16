@@ -1,6 +1,6 @@
 pipeline {
   tools {
-    nodejs 'Node 17'
+    nodejs 'Node 16'
   }
     agent any
     stages {
