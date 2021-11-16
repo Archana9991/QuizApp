@@ -7,7 +7,7 @@ pipeline {
         stage('Check version') {
             steps {
                 echo 'Checking..'
-                bat 'npm --version'
+                sh 'npm --version'
             }
 //           post{ 
 //           success{
@@ -22,7 +22,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 echo 'Install deps..'
-                bat 'npm install'
+                sh 'npm install'
             }
 //           post{ 
 //           success{
@@ -38,7 +38,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                bat 'npm test'
+                sh 'npm test'
             }
 //           post{ 
 //           success{
