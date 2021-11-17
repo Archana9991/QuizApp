@@ -8,11 +8,11 @@ export class QuestionService {
   constructor(private http: HttpClient) { }
   fetchAllQuestions(){
     // return this.http.get( environment.baseUrl);
-    return this.http.get( 'http://localhost:8080/questions/');
+    return this.http.get( 'http://localhost:9000/questions/');
   }
 
   addQuestion(question: any){
-    return this.http.post('http://localhost:8080/questions/', question)
+    return this.http.post('http://localhost:9000/questions/', question)
   }
   // public evalQuiz(questions:any) {
   //   return this.http.post('http://localhost:8080/questions/', questions);
